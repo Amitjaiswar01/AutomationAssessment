@@ -14,7 +14,7 @@ namespace AutomationPageObject.Pages.LoginPage
         private string _loginBtnId = "loginBtn";
         private string _adminDashboardClass = "admin-dashboard";
 
-        public Browser Browser;
+        public Browser Browser { get; set; }
         public Login(Browser browser)
         {
             Browser = browser;

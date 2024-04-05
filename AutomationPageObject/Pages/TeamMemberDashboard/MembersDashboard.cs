@@ -26,7 +26,7 @@ namespace AutomationPageObject.Pages.TeamMemberDashboard
         private string _deleteModalClass = "modal-body";
         private string _modalDeleteBtnClass = "btn-danger";
 
-        public Browser Browser;
+        public Browser Browser { get; set; }
         public MembersDashboard(Browser browser)
         {
             Browser = browser;

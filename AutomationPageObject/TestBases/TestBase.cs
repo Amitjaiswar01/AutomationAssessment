@@ -10,12 +10,12 @@ namespace AutomationCore.TestBases
 {
     public class TestBase : IDisposable
     {
-        public Browser Browser;
-        public Locate Locate;
-        public Login Login;
-        public ReportOverview ReportOverview;
-        public MembersDashboard MembersDashboard;
-        public Assert Asserts;
+        public Browser Browser { get; set; }
+        public Locate Locate { get; set; }
+        public Login Login { get; set; }
+        public ReportOverview ReportOverview { get; set; }
+        public MembersDashboard MembersDashboard { get; set; }
+        public Assert Asserts { get; set; }
 
         public TestBase() 
         {

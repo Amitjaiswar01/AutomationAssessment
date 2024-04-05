@@ -15,7 +15,7 @@ namespace AutomationPageObject.Pages.ReportOverview
         private string _navItemClass = "nav-item";
         private string _manageTeamMmembersSelector = "[aria-label='Manage Team Members']";
 
-        public Browser Browser;
+        public Browser Browser { get; set; }
         public ReportOverview(Browser browser) 
         {
             Browser = browser;
@@ -30,7 +30,6 @@ namespace AutomationPageObject.Pages.ReportOverview
             SetupHeader(4).Click();
             Thread.Sleep(4000);
 
-            Browser.Waits(ManageTeamMmembersOption);
             ManageTeamMmembersOption.Click();
 
             Thread.Sleep(4000);
