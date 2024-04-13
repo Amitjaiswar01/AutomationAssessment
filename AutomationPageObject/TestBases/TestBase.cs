@@ -1,6 +1,7 @@
 ﻿using System;
 using AutomationCore.Asserts;
 using AutomationCore.Browsers;
+using AutomationCore.BrowserWaits;
 using AutomationCore.WebLocators;
 using AutomationPageObject.Pages.LoginPage;
 using AutomationPageObject.Pages.ReportOverview;
@@ -10,6 +11,7 @@ namespace AutomationCore.TestBases
 {
     public class TestBase : IDisposable
     {
+        public BrowserWait Waits {  get; set; }
         public Browser Browser { get; set; }
         public Locate Locate { get; set; }
         public Login Login { get; set; }
@@ -25,6 +27,7 @@ namespace AutomationCore.TestBases
             ReportOverview = new ReportOverview(Browser);
             MembersDashboard = new MembersDashboard(Browser);
             Asserts = new Assert();
+            Waits = new BrowserWait(Browser);
         }
 
         public void IntializeFramework()

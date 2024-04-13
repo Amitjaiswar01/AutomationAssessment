@@ -26,10 +26,10 @@ namespace AutomationPageObject.Pages.ReportOverview
 
         public void NaviagteToTeamMemberDashboard()
         {
-            Thread.Sleep(2000);
+            Browser.Wait.ElementIsVisible(By.ClassName(_navItemClass));
             SetupHeader(4).Click();
-            Thread.Sleep(4000);
 
+            Browser.Wait.ElementIsVisible(By.CssSelector(_manageTeamMmembersSelector));
             ManageTeamMmembersOption.Click();
 
             Thread.Sleep(4000);

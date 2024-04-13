@@ -17,7 +17,7 @@ namespace AutomationTestCases.TestScenario
 
             // Act: Add the Username & Password
             Login.SignIn("testautomation", "Welcome123");
-            //Asserts.True(Login.IsloggedInSucess(), "Account is not logged in");
+            Asserts.True(Login.IsloggedInSucess(), "Account is not logged in");
 
             /* Act: 
              * Click on Setup from Header

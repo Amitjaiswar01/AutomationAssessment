@@ -31,7 +31,7 @@ namespace AutomationPageObject.Pages.LoginPage
             PasswordField.SendKeys(passcode);
 
             SignInButton.Click();
-            Thread.Sleep(5000);
+            Browser.Wait.ElementIsVisible(By.ClassName(_adminDashboardClass));
         }
 
         public bool IsloggedInSucess()
